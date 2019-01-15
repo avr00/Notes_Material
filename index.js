@@ -34,6 +34,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-const listener = app.listen(process.env.PORT || 8000, function() {
+app.listen(process.env.PORT || 8000, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
